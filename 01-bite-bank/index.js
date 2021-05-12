@@ -16,6 +16,8 @@ contaCorrenteRaphael.cliente = cliente1;
 
 console.log(contaCorrenteRaphael);
 
-// const contaCorrenteDanielle = new ContaCorrente();
-// contaCorrenteDanielle.saldo = 0;
-// contaCorrenteDanielle.agencia = 1002;
+const conta2 = new ContaCorrente();
+conta2.agencia = 1002;
+conta2.cliente = cliente2;
+
+console.log(conta2);
