@@ -1,0 +1,20 @@
+{
+  "name": "bitebank",
+  "version": "1.0.0",
+  "description": "Projeto do bitebank para seus clientes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphaelprsilva/study-projects.git"
+  },
+  "author": "Raphael",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/raphaelprsilva/study-projects/issues"
+  },
+  "homepage": "https://github.com/raphaelprsilva/study-projects#readme"
+}
