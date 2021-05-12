@@ -1,3 +1,5 @@
+import {Cliente} from '/home/raphael/Documentos/Raphael/Learning_Projects/study-projects/01-bite-bank/Cliente.js';
+import {ContaCorrente} from '/home/raphael/Documentos/Raphael/Learning_Projects/study-projects/01-bite-bank/ContaCorrente.js';
 
 const cliente1 = new Cliente();
 cliente1.nome = "Raphael";
