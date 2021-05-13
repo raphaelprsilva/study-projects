@@ -6,9 +6,9 @@ export class ContaCorrente {
   _cliente;
   _saldo = 0;
 
-  set cliente (novoValor) {
-    if (novoValor instanceof Cliente) {
-      this._cliente = novoValor;
+  set cliente (novoCliente) {
+    if (novoCliente instanceof Cliente) {
+      this._cliente = novoCliente;
     }
   }
 
