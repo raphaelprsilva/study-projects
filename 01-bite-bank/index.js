@@ -1,23 +1,12 @@
-import {Cliente} from '/home/raphael/Documentos/Raphael/Learning_Projects/study-projects/01-bite-bank/Cliente.js';
-import {ContaCorrente} from '/home/raphael/Documentos/Raphael/Learning_Projects/study-projects/01-bite-bank/ContaCorrente.js';
+import { Cliente } from "./Cliente.js";
+import { ContaCorrente } from "./ContaCorrente.js";
+import { ContaPoupanca } from "./ContaPoupanca.js";
+import { Conta } from "./Conta.js";
 
-const cliente1 = new Cliente();
-cliente1.nome = "Raphael";
-cliente1.cpf = 10115002642;
+const cliente1 = new Cliente('Raphael', 11122233309);
+const cliente2 = new Cliente('Danielle', 88822233309);
 
+const conta1 = new ContaCorrente(1001, cliente1);
 
-const cliente2 = new Cliente();
-cliente2.nome = "Danielle";
-cliente2.cpf = 10111124565;
-
-const contaCorrenteRaphael = new ContaCorrente();
-contaCorrenteRaphael.agencia = 1001;
-
-const valorDepositado = contaCorrenteRaphael.depositar(100);
-const valorSacado = contaCorrenteRaphael.sacar(50);
-console.log(valorDepositado);
-console.log(contaCorrenteRaphael);
-
-const contaCorrenteDanielle = new ContaCorrente();
-contaCorrenteDanielle.saldo = 0;
-contaCorrenteDanielle.agencia = 1002;
+const contaPoupanca = new ContaPoupanca(50, cliente1, 1001);
+console.log(contaPoupanca);
