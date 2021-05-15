@@ -1,3 +1,5 @@
+import { listaClientes } from '../service/client-service.js';
+
 const criaNovaLinha = (nome, email, id) => {
   const linhaNovoCliente = document.createElement('tr');
   const conteduo = `
