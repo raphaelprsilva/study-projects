@@ -16,20 +16,9 @@ const criaNovaLinha = (nome, email, id) => {
 const tabela = document.querySelector('[data-tabela]');
 
 const listaClientes = () => {
-  const promise = new Promise((response, reject) => {
-    const http = new XMLHttpRequest();
-    http.open('GET', 'http://localhost:3000/profile');
-
-    http.onload = () => {
-      if(http.status >= 400) {
-        reject(JSON.parse(http.response));
-      } else {
-        response(JSON.parse(http.response));
-      }
-    }
-    http.send();
-  });
-  return promise;
+  const url = 'http://localhost:3000/profile';
+  return fetch(url)
+    .then(response => response.json());
 }
 
 listaClientes()
