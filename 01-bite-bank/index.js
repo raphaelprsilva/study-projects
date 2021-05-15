@@ -9,8 +9,5 @@ const cliente2 = new Cliente('Danielle', 88822233309);
 const contaCorrente = new ContaCorrente(1001, cliente2);
 const contaPoupanca = new ContaPoupanca(100, cliente1, 1001);
 
-contaCorrente.depositar(100);
-contaCorrente.sacar(40);
+const conta = new Conta(0, cliente1, 101);
 
-console.log(contaPoupanca);
-console.log(contaCorrente);
