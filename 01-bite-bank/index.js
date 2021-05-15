@@ -8,5 +8,3 @@ const cliente2 = new Cliente('Danielle', 88822233309);
 
 const contaCorrente = new ContaCorrente(1001, cliente2);
 const contaPoupanca = new ContaPoupanca(100, cliente1, 1001);
-
-const conta = new Conta(0, cliente1, 101);

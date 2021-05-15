@@ -1,3 +1,5 @@
+// É uma classe abstrata, pois não pode ser invocada
+
 export class Conta {
   constructor (saldoInicial, cliente, agencia) {
     if (this.constructor === Conta) {
@@ -24,11 +26,10 @@ export class Conta {
     return this._saldo;
   }
 
-  // Este método sacar é público, porém, está utilizando um método privado
-  sacar(valor) {
-    let taxa = 1;
-    // Invocando o método privado _sacar 
-    return this._sacar(valor, taxa);
+  // Este método é abstrato, ou seja, todas as classes que herdarem a
+  // classe Conta, deverão implementar o método 'sacar'
+  sacar(valor) { 
+    throw new Error('O método sacar da conta é abstrato.');
   }
 
   // Criando um método privado para poder usar nos demais tipos de contas
