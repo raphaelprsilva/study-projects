@@ -8,6 +8,12 @@ export class Funcionario {
     this._senha;
   }
 
+  // Com este acessor é possível apenas 'pegar' a propriedade
+  // Não é possível 'setar' uma senha
+  get senha() {
+    return this._senha;
+  }
+
   cadastrarSenha(senha) {
     this._senha = senha;
   }
