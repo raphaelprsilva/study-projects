@@ -1,4 +1,4 @@
-import { listaClientes } from '../service/client-service.js';
+import { clienteService } from '../service/client-service.js';
 
 const criaNovaLinha = (nome, email, id) => {
   const linhaNovoCliente = document.createElement('tr');
@@ -17,7 +17,7 @@ const criaNovaLinha = (nome, email, id) => {
 
 const tabela = document.querySelector('[data-tabela]');
 
-listaClientes()
+clienteService.listaClientes()
   .then( data => {
     data.forEach(element => {
       tabela.appendChild(criaNovaLinha(element.nome, element.email));
