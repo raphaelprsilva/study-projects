@@ -12,14 +12,27 @@ const criaNovaLinha = (nome, email, id) => {
         </ul>
     </td>`;
   linhaNovoCliente.innerHTML = conteduo;
+  linhaNovoCliente.dataset.id = id;
   return linhaNovoCliente;
 }
 
 const tabela = document.querySelector('[data-tabela]');
 
+tabela.addEventListener('click', (event) => {
+  const buttonClass = 'botao-simples botao-simples--excluir'
+  const botaoDeletar = event.target.className === buttonClass;
+
+  if (botaoDeletar) {
+    const linhaCliente = event.target.closest('[data-id]');
+    let id = linhaCliente.dataset.id;
+    clienteService.removeCliente(id)
+      .then(() => linhaCliente.remove());
+  }
+})
+
 clienteService.listaClientes()
   .then( data => {
     data.forEach(element => {
-      tabela.appendChild(criaNovaLinha(element.nome, element.email));
+      tabela.appendChild(criaNovaLinha(element.nome, element.email, element.id));
     });
   });
