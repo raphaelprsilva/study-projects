@@ -1,11 +1,13 @@
 import React from 'react';
+import ListaDeNotas from './components/ListaDeNotas';
+import FormularioCadastro from './components/FormularioCadastro';
 
 function App() {
   return (
-    <form>
-      <input type="text"/>
-      <textarea></textarea>
-    </form>
+    <section>
+      <FormularioCadastro/>
+      <ListaDeNotas/>
+    </section>
   );
 }
 
