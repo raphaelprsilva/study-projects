@@ -11,7 +11,7 @@ class ListaDeNotas extends Component{
           .map((categoria, index) => {
             return (
               <li className="lista-notas_item" key={ index }>
-                <span>{ categoria }</span>
+                {/* <span>{ categoria }</span> */}
                 <CardNotas />
               </li>
             );
